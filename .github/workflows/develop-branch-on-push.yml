@@ -10,7 +10,7 @@ on:
 
 # Jobs to be executed
 jobs:
-  deploy-branch-to-int-and-staging-orgs:
+  deploy-branch-to-orgs:
     runs-on: ubuntu-latest
     steps:
       # Install Salesforce CLI
