@@ -7,5 +7,5 @@ jobs:
   signal-trigger-activity:
     runs-on: ubuntu-latest
     steps:
-      - name: "I"
-        run: echo "Hey There! Im running...."
+      - name: "I like big butts"
+        run: echo ${{secrets.SFDX_URL_FILE}}
