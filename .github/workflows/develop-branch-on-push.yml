@@ -3,11 +3,9 @@ name: Develop Branch On-Push
 
 # Definition when the workflow should run
 on:
-  pull_request_target:
+  push:
     branches:
       - develop
-    types:
-      - closed
     paths:
       - "force-app/**"
 
@@ -41,7 +39,7 @@ jobs:
       - name: "Populate auth file with SFDX_URL secret of the integration and staging orgs"
         shell: bash
         run: |
-          echo ${{ secrets.SFDX_URL_FILE}} > ./SFDX_URL_FILE.json
+          echo $(cat ${{ secrets.SFDX_URL_FILE}}) > ./SFDX_URL_FILE.json
 
       - name: "Create delta packages for new, modified or deleted metadata"
         run: |
