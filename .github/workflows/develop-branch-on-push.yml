@@ -12,7 +12,6 @@ on:
 jobs:
   deploy-branch-to-int-and-staging-orgs:
     runs-on: ubuntu-latest
-    if: ${{ github.actor != 'dependabot[bot]' }}
     steps:
       # Install Salesforce CLI
       - name: "Install Salesforce CLI"
