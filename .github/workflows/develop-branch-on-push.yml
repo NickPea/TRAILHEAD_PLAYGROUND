@@ -36,8 +36,7 @@ jobs:
       # Store secret for both otgs
       - name: "Populate auth file with SFDX_URL secret of the integration and staging orgs"
         shell: bash
-        run: |
-          echo "$(cat ${{secrets.SFDX_URL_FILE}})" > ./SFDX_URL_FILE.json
+        run: printf '%b' $(cat ${{secrets.SFDX_URL_FILE}}) > ./SFDX_URL_FILE.json
 
       - name: "Create delta packages for new, modified or deleted metadata"
         run: |
