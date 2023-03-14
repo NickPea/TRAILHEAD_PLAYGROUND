@@ -3,5 +3,6 @@ public with sharing class TestApexClass {
 
         String test;
         Long num;
+        Boolean isWhat;
     }
 }
