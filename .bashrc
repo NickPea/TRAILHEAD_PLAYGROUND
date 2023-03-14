@@ -14,4 +14,4 @@ git_mega_push() {
 
 alias whattheshit='clear'
 
-#holy cow man
+#holy cow man dudd
