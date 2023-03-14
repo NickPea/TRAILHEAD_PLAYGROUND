@@ -7,5 +7,5 @@ jobs:
   signal-trigger-activity:
     runs-on: ubuntu-latest
     steps:
-      - name: "I"
-        run: echo ${{secrets.SFDX_URL_FILE}}
+      - name: ""
+        run: echo $(cat ${{secrets.SFDX_URL_FILE}})
