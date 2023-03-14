@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "I like big butts"
-        run: echo ${{ fromJSON(secrets.SFDX_URL_FILE) }}
+        run: echo ${{ secrets.SFDX_URL_FILE }}
