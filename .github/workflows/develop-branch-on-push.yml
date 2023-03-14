@@ -6,8 +6,6 @@ on:
   push:
     branches:
       - develop
-    paths:
-      - "force-app/**"
 
 # Jobs to be executed
 jobs:
@@ -48,7 +46,7 @@ jobs:
 
       # Authenticate to org
       - name: "Authenticate to Integration Org"
-        run: sfdx auth:sfdxurl:store -f ./SFDX_URL_FILE.json -s -a integration
+        run: sfdx auth:sfdxurl:store -f ./SFDX_URL_FILE.json -s -a TRAILHEAD_PLAYGROUND
 
       - name: "Deploy the entire branch to Integration org"
         run: sfdx force:source:deploy -p force-app --testlevel RunLocalTests --json
