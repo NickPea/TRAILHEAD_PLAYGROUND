@@ -2,6 +2,7 @@
 
 echo "Bash Profile Active"
 
+echo "hello rojer....testing"
 
 alias cls=clear
 
