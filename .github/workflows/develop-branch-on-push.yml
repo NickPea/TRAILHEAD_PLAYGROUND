@@ -41,7 +41,7 @@ jobs:
       - name: "Populate auth file with SFDX_URL secret of the integration and staging orgs"
         shell: bash
         run: |
-          echo ${{ secrets.SFDX_URL_FILE}} > ./SFDX_URL_FILE.txt
+          echo ${{secrets.SFDX_URL_FILE}} > ./SFDX_URL_FILE.txt
 
       - name: "Create delta packages for new, modified or deleted metadata"
         run: |
@@ -49,8 +49,8 @@ jobs:
           sfdx sgd:source:delta --to "HEAD" --from "HEAD^" --output changed-sources/ --generate-delta --source force-app/
 
       # Authenticate to org
-      - name: "Authenticate to Integration Org"
-        run: sfdx auth:sfdxurl:store -f ./SFDX_URL_FILE.txt -s -a integration
+      - name: "Authenticate to Org"
+        run: sfdx auth:sfdxurl:store -f ./SFDX_URL_FILE.txt -s -a TRAILHEAD_PLAYGROUND
 
       - name: "Deploy the entire branch to Integration org"
         run: sfdx force:source:deploy -p force-app --testlevel RunLocalTests --json
