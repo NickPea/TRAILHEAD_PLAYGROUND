@@ -12,4 +12,6 @@ git_mega_push() {
     git push
 }
 
-#holy cow
+alias whattheshit='clear'
+
+#holy cow man
