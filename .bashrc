@@ -1,8 +1,6 @@
 ##
 
-echo 
 echo "Bash Profile Active"
-echo
 
 
 alias cls=clear
