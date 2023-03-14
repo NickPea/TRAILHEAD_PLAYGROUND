@@ -3,8 +3,9 @@ name: Develop Branch On-Push
 
 # Definition when the workflow should run
 on:
-  pull_request:
-    branches: [develop]
+  pull_request_target:
+    branches:
+      - develop
     types: 
       - closed
     paths:
