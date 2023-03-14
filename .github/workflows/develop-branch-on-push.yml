@@ -1,5 +1,5 @@
 # Unique name for this workflow
-name: Deploy "Develop" branch to Playground on-push
+name: Develop Branch On-Push
 
 # Definition when the workflow should run
 on:
