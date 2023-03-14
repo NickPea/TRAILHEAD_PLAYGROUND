@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "run"
-        run: printf '%b' ${{secrets.SFDX_URL_FILE}})
+        run: cat ${{secrets.SFDX_URL_FILE}})
