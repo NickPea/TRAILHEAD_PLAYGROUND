@@ -1,0 +1,11 @@
+on:
+  push:
+    branches:
+      - main
+      - develop
+jobs:
+  signal-trigger-activity:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "I"
+        run: echo "Hey There! Im running...."
