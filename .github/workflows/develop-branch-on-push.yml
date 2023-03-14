@@ -3,8 +3,10 @@ name: Develop Branch On-Push
 
 # Definition when the workflow should run
 on:
-  push:
+  pull_request:
     branches: [develop]
+    types: 
+      - closed
     paths:
       - "force-app/**"
 
