@@ -11,3 +11,5 @@ git_mega_push() {
     git commit -m 'commit all'
     git push
 }
+
+#holy cow
