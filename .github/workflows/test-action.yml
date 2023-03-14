@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ""
-        run: echo $(cat ${{secrets.SFDX_URL_FILE}})
+        run: echo "$(cat ${{secrets.SFDX_URL_FILE}})""
